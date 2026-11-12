@@ -1,0 +1,18 @@
+{
+  "name": "mysql-to-mongodb-migration",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Migração de funcionários do MySQL para o MongoDB e consultas de relatórios.",
+  "main": "src/migrate.js",
+  "engines": {"node": ">=22.9.0"},
+  "scripts": {
+    "migrate": "node --env-file-if-exists=.env src/migrate.js",
+    "reports": "node --env-file-if-exists=.env src/reports.js",
+    "check": "node --env-file-if-exists=.env src/check-connection.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "mongodb": "^6.2.0",
+    "mysql2": "^3.6.2"
+  }
+}
